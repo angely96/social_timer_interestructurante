@@ -11,7 +11,7 @@ from django.utils.html import strip_tags
 class CustomUserManager(BaseUserManager): 
     def create_user(self, email, password=None, **extra_fields ): 
         if not email: 
-            raise ValueError('Email is a required field')
+            raise ValueError('Correo es requerido')
         
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)

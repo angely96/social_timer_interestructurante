@@ -89,7 +89,7 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'supabase': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': env('S_DB_HOST'),
         'NAME': env('S_DB_NAME'),
@@ -97,7 +97,7 @@ DATABASES = {
         'PASSWORD':env('S_DB_PASSWORD'),
         'PORT':env('S_DB_PORT'),
     },
-    'local': {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
